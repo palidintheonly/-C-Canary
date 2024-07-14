@@ -1,0 +1,31 @@
+{
+  "name": "cool-bot",
+  "main": "bot.js",
+  "author": "bmd",
+  "description": "Awesome Discord bot - Made with Bot Maker for Discord",
+  "dependencies": {
+    "@distube/ytdl-core": "^4.13.5",
+    "axios": "^1.6.8",
+    "bc-dlp": "^2.0.0",
+    "better-sqlite3": "^11.1.2",
+    "ffmpeg": "^0.0.4",
+    "fs-extra": "^11.1.1",
+    "fse": "^4.0.1",
+    "jimp": "^0.22.10",
+    "libsodium": "^0.7.13",
+    "libsodium-wrappers": "^0.7.13",
+    "normalize-date": "^0.0.4",
+    "oceanic.js": "^1.11.0",
+    "optional": "^0.1.4",
+    "opus": "^0.0.0",
+    "play-dl": "^1.9.7",
+    "quick.db": "^9.1.7",
+    "replace-color": "^2.3.0",
+    "undici": "^6.2.1",
+    "write-file-atomic": "^5.0.1",
+    "youtube-search": "^1.1.6",
+    "yt-search": "^2.10.4",
+    "zod": "^3.23.8"
+  },
+  "version": "1.0.0"
+}

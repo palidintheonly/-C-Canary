@@ -1,0 +1,2626 @@
+{
+  "commands": [
+    {
+      "name": "insults",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Randomize HEX Color",
+          "file": "randomizeHex.js",
+          "data": {
+            "name": "Randomize HEX Color",
+            "store": {
+              "type": "temporary",
+              "value": "h"
+            }
+          },
+          "id": 1720116831562
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "Hello World!",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "command",
+              "value": ""
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            }
+          },
+          "id": 1720959920089
+        },
+        {
+          "name": "Insult Generator",
+          "file": "insultGenerator_MOD.js",
+          "data": {
+            "name": "Insult Generator",
+            "language": {
+              "type": "en",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "insult me"
+            }
+          },
+          "id": 1720118031936
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "insult generator",
+                  "embedColor": "${tempVars('h')}",
+                  "footerContent": "${tempVars('h')}",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "JOKES AND FUN  (nsfw)",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Insult:_",
+                        "value": "> `${tempVars('insult me')}`",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1254467538637820105"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1720116857984
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Minutes",
+            "time": "5"
+          },
+          "id": 1720118031937
+        },
+        {
+          "name": "Jump To Action",
+          "file": "jumpToAction.js",
+          "data": {
+            "name": "Jump To Action",
+            "action": "1"
+          },
+          "id": 1720118031938
+        }
+      ],
+      "customId": 1720116801389,
+      "eventFile": "bot_ready.js",
+      "eventData": [
+        "",
+        ""
+      ],
+      "folder": []
+    },
+    {
+      "name": "GPT",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Get Server Info",
+          "file": "getGuildInfo.js",
+          "data": {
+            "name": "Get Server Info",
+            "guild": {
+              "type": "current",
+              "value": "${tempVars('server')}"
+            },
+            "get": {
+              "type": "name",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "server.name"
+            }
+          },
+          "id": 1719158096457
+        },
+        {
+          "name": "Get Server Info",
+          "file": "getGuildInfo.js",
+          "data": {
+            "name": "Get Server Info",
+            "guild": {
+              "type": "current",
+              "value": "${tempVars('server')}"
+            },
+            "get": {
+              "type": "iconURL",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "server.pfp"
+            }
+          },
+          "id": 1719158449751
+        },
+        {
+          "name": "Randomize Number",
+          "file": "randomizeNumber.js",
+          "data": {
+            "name": "Randomize Number",
+            "firstNumber": "1",
+            "secondNumber": "10",
+            "store": {
+              "type": "temporary",
+              "value": "time"
+            }
+          },
+          "id": 1719155047886
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "GPT COMMAND SENT",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "command",
+              "value": ""
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": true,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718721385237
+        },
+        {
+          "name": "Get User Info",
+          "file": "getUserInfo.js",
+          "data": {
+            "name": "Get User Info",
+            "user": {
+              "type": "author",
+              "value": ""
+            },
+            "get": {
+              "type": "avatarURL",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "dont fail"
+            }
+          },
+          "id": 1718720923687
+        },
+        {
+          "name": "Get User Info",
+          "file": "getUserInfo.js",
+          "data": {
+            "name": "Get User Info",
+            "user": {
+              "type": "author",
+              "value": ""
+            },
+            "get": {
+              "type": "name",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "name"
+            }
+          },
+          "id": 1719154769828
+        },
+        {
+          "name": "Ask AI",
+          "file": "askAI_MOD.js",
+          "data": {
+            "name": "Ask AI",
+            "url": "https://api.openai.com/v1/chat/completions",
+            "key": "sk-discord-canary-JCDsAR4Md2JYU1OfkBVjT3BlbkFJaNEA4JOnLEQQM7yN6n5F",
+            "model": "gpt-4o-2024-05-13",
+            "prompt": "${tempVars('say')}",
+            "systemPrompt": "No NSFW. Safe Mode",
+            "tokenLimit": "100",
+            "exceeded": {
+              "type": "jump",
+              "value": "13"
+            },
+            "exceededActions": [],
+            "store": {
+              "type": "temporary",
+              "value": "resolve"
+            }
+          },
+          "id": 1718711471668
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "You Ask: ",
+                  "embedColor": "#00e1ff",
+                  "footerContent": "${tempVars('server.name')}",
+                  "imageURL": "",
+                  "footerIconURL": "${tempVars('server.pfp')}",
+                  "thumbnailURL": "",
+                  "authorName": "${tempVars('name')}",
+                  "authorIcon": "${tempVars('dont fail')}",
+                  "description": "\"_${tempVars('say')}_\" ",
+                  "fields": [],
+                  "url": "",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1252377167128428586"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718715472971
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "${tempVars('time')}"
+          },
+          "id": 1718720633761
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "Chat GPT Says:",
+                  "embedColor": "#00ff04",
+                  "footerContent": "Chat GPT | Build #2",
+                  "imageURL": "",
+                  "footerIconURL": "https://i.ibb.co/Pz4Bt8K/Chat-Gpt-Png.png",
+                  "thumbnailURL": "",
+                  "authorName": "Chat GPT",
+                  "authorIcon": "https://i.ibb.co/Pz4Bt8K/Chat-Gpt-Png.png",
+                  "description": "_${tempVars('resolve')}_",
+                  "fields": [],
+                  "url": "",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1252377167128428586"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718715579583
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1718722400805
+        },
+        {
+          "name": "Stop Actions",
+          "file": "stopRunningActions.js",
+          "data": {
+            "name": "Stop Actions"
+          },
+          "id": 1718721508342
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "`It Seems that either your out of credits or you have exeeded the set limit of:` `100 Credits` \n",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "id",
+              "value": "1252377167128428586"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718721522482
+        },
+        {
+          "name": "Stop Actions",
+          "file": "stopRunningActions.js",
+          "data": {
+            "name": "Stop Actions"
+          },
+          "id": 1718721667966
+        }
+      ],
+      "customId": 1718710112314,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [
+        {
+          "name": "ask",
+          "type": "string",
+          "description": "Ask chat GPT Somthing",
+          "required": true,
+          "choices": [],
+          "storeAs": "say",
+          "completion": false
+        }
+      ],
+      "description": "Use Chat GPT",
+      "folder": [
+        1719772253339
+      ]
+    },
+    {
+      "name": "kick",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "get": {
+              "type": "username",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "username"
+            }
+          },
+          "id": 1718385795126
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "get": {
+              "type": "avatarURL",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "AVATAR"
+            }
+          },
+          "id": 1719258791116
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "You have kicked <@${tempVars('ID')}> (${tempVars('username')}) with reason of [ ${tempVars('Reason.kick')} ]",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "command",
+              "value": ""
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": true,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719259557548
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1719259130873
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "_YOU HAVE BEEN KICKED_",
+                  "embedColor": "#ff1e00",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "${tempVars('AVATAR')}",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_USER_",
+                        "value": "<@${tempVars('ID')}>",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_USERNAME_",
+                        "value": "> ${tempVars('username')}",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_ID_",
+                        "value": "```${tempVars('ID')}```",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_REASON FOR KICK_",
+                        "value": "> ${tempVars('Reason.kick')}",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "None",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "userID",
+              "value": "${tempVars('ID')}"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719258368359
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1719259145587
+        },
+        {
+          "name": "Kick Member",
+          "file": "kickMember.js",
+          "data": {
+            "name": "Kick Member",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "reason": "${tempVars('Reason.kick')}"
+          },
+          "id": 1718385641470
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1719259150028
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "_MEMBER KICKED_",
+                  "embedColor": "#ff1e00",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "${tempVars('AVATAR')}",
+                  "authorName": "Staff Data",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_USER_",
+                        "value": "<@${tempVars('ID')}>",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_USERNAME_",
+                        "value": "> ${tempVars('username')}",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_ID_",
+                        "value": "```${tempVars('ID')}```",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_REASON FOR KICK_",
+                        "value": "> ${tempVars('Reason.kick')}",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "None",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1254885819286814770"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719258864088
+        }
+      ],
+      "customId": 1718385633934,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Member ID",
+          "required": true,
+          "choices": [],
+          "storeAs": "ID",
+          "completion": false
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "description": "Reason For Kick",
+          "required": true,
+          "choices": [],
+          "storeAs": "Reason.kick",
+          "completion": false
+        }
+      ],
+      "description": "Kicks a member",
+      "folder": [
+        1719772282275
+      ],
+      "color": "rgb(255, 106, 0)"
+    },
+    {
+      "name": "unban",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Get User Info",
+          "file": "getUserInfo.js",
+          "data": {
+            "name": "Get User Info",
+            "user": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "get": {
+              "type": "username",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "usr.nme"
+            }
+          },
+          "id": 1719846439163
+        },
+        {
+          "name": "Unban Member",
+          "file": "unbanMember.js",
+          "data": {
+            "name": "Unban Member",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "reason": "${tempVars('resz')}"
+          },
+          "id": 1718395051513
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "Member Unbanned",
+                  "embedColor": "#ff8c00",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_DESC_",
+                        "value": "<@${tempVars('ID')}>",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_USERNAME_",
+                        "value": "`${tempVars('usr.nme')}`",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_ID_",
+                        "value": "```${tempVars('ID')}```",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_REASON_",
+                        "value": "`${tempVars('resz')}`",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1257352305439674462"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718395099072
+        }
+      ],
+      "customId": 1718395045984,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "-",
+          "required": true,
+          "choices": [],
+          "storeAs": "ID",
+          "completion": false
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "description": "-",
+          "required": true,
+          "choices": [],
+          "storeAs": "resz",
+          "completion": false
+        }
+      ],
+      "description": "Unban a member",
+      "folder": [
+        1719772282275
+      ]
+    },
+    {
+      "name": "Purge 300",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Bulk Delete",
+          "file": "bulkDeleteMessages.js",
+          "data": {
+            "name": "Bulk Delete",
+            "user": {
+              "type": "any",
+              "value": ""
+            },
+            "channel": {
+              "type": "command",
+              "value": ""
+            },
+            "amount": "Maximum (300)",
+            "delete": "",
+            "include": "Nothing",
+            "keyword": "",
+            "reason": "/purge 300 command use",
+            "deletedCountStorage": {
+              "type": "temporary",
+              "value": "count"
+            }
+          },
+          "id": 1718375215496
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "you have deleted [${tempVars('count')}] messages",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "command",
+              "value": ""
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": true,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719240122765
+        }
+      ],
+      "customId": 1718375207193,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [],
+      "description": "Purge 300",
+      "folder": [
+        1719772282275
+      ],
+      "color": "rgb(255, 106, 0)"
+    },
+    {
+      "name": "warn",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Timeout Member",
+          "file": "timeoutMember.js",
+          "data": {
+            "name": "Timeout Member",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "unitsOfTime": "Minute(s)",
+            "timeoutDuration": "${tempVars('time')}",
+            "reason": "${tempVars('resza')}"
+          },
+          "id": 1718397365091
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1718397780266
+        },
+        {
+          "name": "Remove Role",
+          "file": "removeRole.js",
+          "data": {
+            "name": "Remove Role",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "role": {
+              "type": "id",
+              "value": "1251270056105607209"
+            },
+            "undefined": "Warning for [${tempVars('resza')}]"
+          },
+          "id": 1718397478872
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1718397791181
+        },
+        {
+          "name": "Add Role",
+          "file": "addRole.js",
+          "data": {
+            "name": "Add Role",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "role": {
+              "type": "id",
+              "value": "1251270252675727440"
+            },
+            "reason": "Punish role [${tempVars('time')}] mins"
+          },
+          "id": 1718397526129
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "Member Warned",
+                  "embedColor": "#fa0000",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_MEMBER:_",
+                        "value": "<@${tempVars('ID')}>",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_ID:_",
+                        "value": "`${tempVars('ID')}`",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Warned For ( mins )_",
+                        "value": "`${tempVars('time')}`mins",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Reason For Warning:_",
+                        "value": "[`${tempVars('resza')}`]",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "None",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1251610684488155218"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718477936701
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1719163979879
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "You have recived a warning",
+                  "embedColor": "#fa0000",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "<@${tempVars('ID')}> You have recived a warning\n\nReason : [`${tempVars('resza')}`]\n\nTime untill expire: `${tempVars('time')}mins`",
+                  "fields": [],
+                  "url": "",
+                  "timestamp": "None",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "userID",
+              "value": "${tempVars('ID')}"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718480160711
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Minutes",
+            "time": "${tempVars('time')}"
+          },
+          "id": 1718397798951
+        },
+        {
+          "name": "Add Role",
+          "file": "addRole.js",
+          "data": {
+            "name": "Add Role",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "role": {
+              "type": "id",
+              "value": "1251270056105607209"
+            },
+            "reason": "Punish Over"
+          },
+          "id": 1718397811862
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1718397839263
+        },
+        {
+          "name": "Remove Role",
+          "file": "removeRole.js",
+          "data": {
+            "name": "Remove Role",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "role": {
+              "type": "id",
+              "value": "1251270252675727440"
+            },
+            "undefined": "Punish Over"
+          },
+          "id": 1718397849242
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "Member Warned `[EXIPRED]`",
+                  "embedColor": "#fa0000",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_MEMBER:_",
+                        "value": "<@${tempVars('ID')}>",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_ID:_",
+                        "value": "```${tempVars('ID')}```",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Warned For ( mins )_",
+                        "value": "`${tempVars('time')}`mins",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Reason For Warning:_",
+                        "value": "[`${tempVars('resza')}`]",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "None",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1251610684488155218"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719163430401
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "2"
+          },
+          "id": 1719163934386
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "",
+                  "embedColor": "#FFFFFF",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "`YOUR WARNING HAS EXPIRED!`\n> Reason: `${tempVars('resza')}`\n> Time: `${tempVars('time')}mins`",
+                  "fields": [],
+                  "url": "",
+                  "timestamp": "None",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "userID",
+              "value": "${tempVars('ID')}"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719163677321
+        }
+      ],
+      "customId": 1718397341579,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "ID OF USER TO WARN",
+          "required": true,
+          "choices": [],
+          "storeAs": "ID",
+          "completion": false
+        },
+        {
+          "name": "time",
+          "type": "string",
+          "description": "I'VE MADE SOME PRESET TIMES",
+          "required": true,
+          "choices": [
+            {
+              "name": "1 MIN",
+              "value": "1"
+            },
+            {
+              "name": "3 MINS",
+              "value": "3"
+            },
+            {
+              "name": "5 MINS",
+              "value": "5"
+            },
+            {
+              "name": "10 MINS",
+              "value": "10"
+            },
+            {
+              "name": "15 MINS",
+              "value": "15"
+            },
+            {
+              "name": "20 MINS",
+              "value": "20"
+            },
+            {
+              "name": "30 MINS",
+              "value": "30"
+            }
+          ],
+          "storeAs": "time",
+          "completion": true
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "description": "REASON FOR WARN",
+          "required": true,
+          "choices": [],
+          "storeAs": "resza",
+          "completion": false
+        }
+      ],
+      "description": "Warn a member",
+      "folder": [
+        1719772282275
+      ],
+      "color": null
+    },
+    {
+      "name": "ban",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Get Server Info",
+          "file": "getGuildInfo.js",
+          "data": {
+            "name": "Get Server Info",
+            "guild": {
+              "type": "current",
+              "value": ""
+            },
+            "get": {
+              "type": "name",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "ser.nme"
+            }
+          },
+          "id": 1719588648612
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "get": {
+              "type": "username",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "usr.nme"
+            }
+          },
+          "id": 1719588485800
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "BANNED",
+                  "embedColor": "#ff0303",
+                  "footerContent": "${tempVars('ser.nme')}",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "YOU HAVE BEEN BANNED",
+                  "authorIcon": "",
+                  "description": "<@${tempVars('ID')}> `[${tempVars('usr.nme')}]` You have been banned from `${tempVars('ser.nme')}`\n\n",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_REASON_",
+                        "value": "`${tempVars('reas')}`",
+                        "inline": true
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "ISO Date",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "userID",
+              "value": "${tempVars('ID')}"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "poll": [],
+            "attachments": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": true,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718394826571
+        },
+        {
+          "name": "Ban Member",
+          "file": "banMember.js",
+          "data": {
+            "name": "Ban Member",
+            "member": {
+              "type": "id",
+              "value": "${tempVars('ID')}"
+            },
+            "reason": "${tempVars('reas')}",
+            "deleteHistory": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1718394793086
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "MEMBER BANNED",
+                  "embedColor": "#FFFFFF",
+                  "footerContent": "${tempVars('ser.nme')}",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_TAG_",
+                        "value": "<@${tempVars('ID')}>",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_USERNAME_",
+                        "value": "`${tempVars('usr.nme')}`",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_ID_",
+                        "value": "```${tempVars('ID')}```",
+                        "inline": true
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_REASON_",
+                        "value": "`${tempVars('reas')}`",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1256270428155023360"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1719588331405
+        }
+      ],
+      "customId": 1718394711514,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "User ID",
+          "required": true,
+          "choices": [],
+          "storeAs": "ID",
+          "completion": false
+        },
+        {
+          "name": "reason",
+          "type": "string",
+          "description": "-",
+          "required": true,
+          "choices": [],
+          "storeAs": "reas",
+          "completion": false
+        }
+      ],
+      "description": "Ban a member",
+      "folder": [
+        1719772282275
+      ],
+      "color": "rgb(255, 0, 0)"
+    },
+    {
+      "name": "POWER STATUS",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Set Bot Activity",
+          "file": "setClientActivity.js",
+          "data": {
+            "name": "Set Bot Activity",
+            "status": "Do Not Disturb",
+            "activity": "Custom",
+            "activityName": "Current Version | v5 | More Moderation & Animal Facts"
+          },
+          "id": 1719777471034
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "5"
+          },
+          "id": 1719777515567
+        },
+        {
+          "name": "Set Bot Activity",
+          "file": "setClientActivity.js",
+          "data": {
+            "name": "Set Bot Activity",
+            "status": "Do Not Disturb",
+            "activity": "Custom",
+            "activityName": "Working On Version | v5.1 | more moderation security and intresting API's"
+          },
+          "id": 1719779268098
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "5"
+          },
+          "id": 1719779276842
+        },
+        {
+          "name": "Jump To Action",
+          "file": "jumpToAction.js",
+          "data": {
+            "name": "Jump To Action",
+            "action": "1"
+          },
+          "id": 1719777531894
+        }
+      ],
+      "customId": 1719777441477,
+      "eventFile": "bot_ready.js",
+      "eventData": [
+        "",
+        ""
+      ],
+      "folder": []
+    },
+    {
+      "name": "join role(s)",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Add Role",
+          "file": "addRole.js",
+          "data": {
+            "name": "Add Role",
+            "member": {
+              "type": "tempVar",
+              "value": "mem"
+            },
+            "role": {
+              "type": "id",
+              "value": "1251270056105607209"
+            },
+            "reason": "ALPHA | Join Roles"
+          },
+          "id": 1718477765833
+        },
+        {
+          "name": "Stop Actions",
+          "file": "stopRunningActions.js",
+          "data": {
+            "name": "Stop Actions"
+          },
+          "id": 1718478660827
+        }
+      ],
+      "customId": 1718477746332,
+      "eventFile": "member_join_guild.js",
+      "eventData": [
+        "mem",
+        ""
+      ],
+      "folder": []
+    },
+    {
+      "name": "member join [staff]",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Randomize HEX Color",
+          "file": "randomizeHex.js",
+          "data": {
+            "name": "Randomize HEX Color",
+            "store": {
+              "type": "temporary",
+              "value": "hex"
+            }
+          },
+          "id": 1719247456112
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Seconds",
+            "time": "3"
+          },
+          "id": 1719245000657
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "tempVar",
+              "value": "member"
+            },
+            "get": {
+              "type": "name",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "Name"
+            }
+          },
+          "id": 1719245885909
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "tempVar",
+              "value": "member"
+            },
+            "get": {
+              "type": "name",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "username"
+            },
+            "guild": {
+              "type": "current",
+              "value": ""
+            }
+          },
+          "id": 1719245958710
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "tempVar",
+              "value": "member"
+            },
+            "get": {
+              "type": "id",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "ID"
+            }
+          },
+          "id": 1719245958199
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "tempVar",
+              "value": "member"
+            },
+            "get": {
+              "type": "status",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "status"
+            }
+          },
+          "id": 1719246206999
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "tempVar",
+              "value": "member"
+            },
+            "get": {
+              "type": "statusText",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "personal.status.text"
+            }
+          },
+          "id": 1719246206248
+        },
+        {
+          "name": "Get Member Info",
+          "file": "getMemberInfo.js",
+          "data": {
+            "name": "Get Member Info",
+            "member": {
+              "type": "tempVar",
+              "value": "member"
+            },
+            "get": {
+              "type": "avatarURL",
+              "value": ""
+            },
+            "store": {
+              "type": "temporary",
+              "value": "pfp"
+            }
+          },
+          "id": 1719247552149
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "Member Joined",
+                  "embedColor": "${tempVars('hex')}",
+                  "footerContent": "",
+                  "imageURL": "",
+                  "footerIconURL": "",
+                  "thumbnailURL": "${tempVars('pfp')}",
+                  "authorName": "Staff Data",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_User_",
+                        "value": "${tempVars('member')}",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Name:_",
+                        "value": "${tempVars('Name')}",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Username_",
+                        "value": "${tempVars('username')}",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Status when joining_ [ONLINE/DND/IDLE...]",
+                        "value": "${tempVars('status')}",
+                        "inline": false
+                      }
+                    },
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Member personal status text_",
+                        "value": "${tempVars('personal.status.text')}",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1254841052989358255"
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ]
+          },
+          "id": 1719246911462
+        }
+      ],
+      "customId": 1719244972175,
+      "eventFile": "member_join_guild.js",
+      "eventData": [
+        "member",
+        ""
+      ],
+      "folder": []
+    },
+    {
+      "name": "cat",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Randomize HEX Color",
+          "file": "randomizeHex.js",
+          "data": {
+            "name": "Randomize HEX Color",
+            "store": {
+              "type": "temporary",
+              "value": "he"
+            }
+          },
+          "id": 1720124561771
+        },
+        {
+          "name": "Random Cat Image URL",
+          "file": "catImage_MOD.js",
+          "data": {
+            "name": "Random Cat Image URL",
+            "store": {
+              "type": "temporary",
+              "value": "cat"
+            }
+          },
+          "id": 1720124344809
+        },
+        {
+          "name": "Get JSON From WebAPI",
+          "file": "getJSONFromWebAPI.js",
+          "data": {
+            "name": "Get JSON From WebAPI",
+            "url": "https://x8ki-letl-twmt.n7.xano.io/api:SA9e6UZW/random_facts",
+            "headers": "",
+            "store": {
+              "type": "temporary",
+              "value": "facts"
+            }
+          },
+          "id": 1720124731968
+        },
+        {
+          "name": "Json Path",
+          "file": "jsonPath_MOD.js",
+          "data": {
+            "name": "Json Path",
+            "json": {
+              "type": "tempVar",
+              "value": "facts"
+            },
+            "path": "$.random_animal_facts",
+            "store": {
+              "type": "temporary",
+              "value": "fr"
+            }
+          },
+          "id": 1720629854988
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "",
+            "actionRows": [],
+            "embeds": [
+              {
+                "type": "embed",
+                "data": {
+                  "title": "Cat generator",
+                  "embedColor": "${tempVars('he')}",
+                  "footerContent": "https://x8ki-letl-twmt.n7.xano.io/api:SA9e6UZW/random_facts | ${tempVars('he')}",
+                  "imageURL": "${tempVars('cat')}",
+                  "footerIconURL": "",
+                  "thumbnailURL": "",
+                  "authorName": "JOKES AND FUN ",
+                  "authorIcon": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "type": "field",
+                      "data": {
+                        "title": "_Random Animal Fact:_",
+                        "value": "> `${tempVars('fr')}`",
+                        "inline": false
+                      }
+                    }
+                  ],
+                  "url": "https://x8ki-letl-twmt.n7.xano.io/api:SA9e6UZW/random_facts",
+                  "timestamp": "Current",
+                  "customTimestamp": ""
+                }
+              }
+            ],
+            "channel": {
+              "type": "id",
+              "value": "1258488002179760238"
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1720124946958
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Minutes",
+            "time": "5"
+          },
+          "id": 1720124715398
+        },
+        {
+          "name": "Jump To Action",
+          "file": "jumpToAction.js",
+          "data": {
+            "name": "Jump To Action",
+            "action": "1"
+          },
+          "id": 1720630636993
+        }
+      ],
+      "customId": 1720124342705,
+      "eventFile": "bot_ready.js",
+      "eventData": [
+        "",
+        ""
+      ],
+      "folder": [
+        1720134270284
+      ]
+    },
+    {
+      "name": "chan cre",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Create Text Channel",
+          "file": "createChannel.js",
+          "data": {
+            "name": "Create Text Channel",
+            "channelName": "Animal facts",
+            "private": true,
+            "category": {
+              "type": "id",
+              "value": "1254111772403826708"
+            },
+            "position": {
+              "type": "unset",
+              "value": ""
+            },
+            "topic": "testing",
+            "reason": "N/A",
+            "store": {
+              "type": "temporary",
+              "value": ""
+            }
+          },
+          "id": 1720134403284
+        }
+      ],
+      "customId": 1720134401410,
+      "eventFile": "none.js",
+      "eventData": [
+        "",
+        ""
+      ],
+      "folder": []
+    },
+    {
+      "name": "animal facts",
+      "type": "event",
+      "trigger": "event",
+      "actions": [
+        {
+          "name": "Get JSON From WebAPI",
+          "file": "getJSONFromWebAPI.js",
+          "data": {
+            "name": "Get JSON From WebAPI",
+            "url": "https://x8ki-letl-twmt.n7.xano.io/api:SA9e6UZW/random_facts",
+            "headers": "",
+            "store": {
+              "type": "temporary",
+              "value": "facts"
+            }
+          },
+          "id": 1720727553920
+        },
+        {
+          "name": "Json Path",
+          "file": "jsonPath_MOD.js",
+          "data": {
+            "name": "Json Path",
+            "json": {
+              "type": "tempVar",
+              "value": "facts"
+            },
+            "path": "$.random_animal_facts",
+            "store": {
+              "type": "temporary",
+              "value": "fr"
+            }
+          },
+          "id": 1720728048036
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "> Fact: [`${tempVars('fr')}`]",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "id",
+              "value": "1261047274369187922"
+            },
+            "replyToInteraction": true,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            },
+            "updateContent": false,
+            "updateComponents": false,
+            "updateEmbeds": false,
+            "updateAttachments": false
+          },
+          "id": 1720727557303
+        },
+        {
+          "name": "Wait",
+          "file": "wait.js",
+          "data": {
+            "name": "Wait",
+            "timeUnit": "Minutes",
+            "time": "1"
+          },
+          "id": 1720728211356
+        },
+        {
+          "name": "Jump To Action",
+          "file": "jumpToAction.js",
+          "data": {
+            "name": "Jump To Action",
+            "action": "1"
+          },
+          "id": 1720728229555
+        }
+      ],
+      "customId": 1720727535681,
+      "eventFile": "bot_ready.js",
+      "eventData": [
+        "",
+        ""
+      ],
+      "folder": []
+    },
+    {
+      "name": "CreateWH",
+      "type": "action",
+      "trigger": "slashCommand",
+      "actions": [
+        {
+          "name": "Create Webhook",
+          "file": "createWebhook.js",
+          "data": {
+            "name": "Create Webhook",
+            "avatar": {
+              "type": "none",
+              "value": "${tempVars('avatar_url')}"
+            },
+            "channel": {
+              "type": "id",
+              "value": "${tempVars('channel_ID')}"
+            },
+            "webhookName": "${tempVars('wh_name')}",
+            "store": {
+              "type": "temporary",
+              "value": "new hook"
+            }
+          },
+          "id": 1720811251774
+        },
+        {
+          "name": "Get Webhook Info",
+          "file": "getWebhookInfo.js",
+          "data": {
+            "name": "Get Webhook Info",
+            "webhook": {
+              "type": "tempVar",
+              "value": "new hook"
+            },
+            "get": "Name",
+            "store": {
+              "type": "temporary",
+              "value": "wh.name"
+            }
+          },
+          "id": 1720811467864
+        },
+        {
+          "name": "Get Webhook Info",
+          "file": "getWebhookInfo.js",
+          "data": {
+            "name": "Get Webhook Info",
+            "webhook": {
+              "type": "tempVar",
+              "value": "new hook"
+            },
+            "get": "Avatar URL",
+            "store": {
+              "type": "temporary",
+              "value": "wh.avatar"
+            }
+          },
+          "id": 1720811501802
+        },
+        {
+          "name": "Get Webhook Info",
+          "file": "getWebhookInfo.js",
+          "data": {
+            "name": "Get Webhook Info",
+            "webhook": {
+              "type": "tempVar",
+              "value": "new hook"
+            },
+            "get": "ID",
+            "store": {
+              "type": "temporary",
+              "value": "wh.ID"
+            }
+          },
+          "id": 1720811501438
+        },
+        {
+          "name": "Get Webhook Info",
+          "file": "getWebhookInfo.js",
+          "data": {
+            "name": "Get Webhook Info",
+            "webhook": {
+              "type": "tempVar",
+              "value": "new hook"
+            },
+            "get": "Token",
+            "store": {
+              "type": "temporary",
+              "value": "wh.token"
+            }
+          },
+          "id": 1720811538720
+        },
+        {
+          "name": "Send Message",
+          "file": "sendmessage.js",
+          "data": {
+            "name": "Send Message",
+            "messageContent": "You have created a new webhook\n\n> Name: [`${tempVars('wh_name')}`]\n\n> Avatar: [`${tempVars('avatar_url')}`]\n\n> ID: ```${tempVars('wh.ID')}```\n\n> Token: ```${tempVars('wh.token')}```",
+            "actionRows": [],
+            "embeds": [],
+            "channel": {
+              "type": "commandAuthor",
+              "value": ""
+            },
+            "replyToInteraction": false,
+            "storeAs": {
+              "value": "",
+              "type": "temporary"
+            },
+            "options": [
+              {
+                "type": "options"
+              }
+            ],
+            "attachments": [],
+            "poll": [],
+            "mentions": false,
+            "dontSend": false,
+            "ephemeral": false,
+            "updateMessage": {
+              "type": "none",
+              "value": ""
+            }
+          },
+          "id": 1720811436240
+        }
+      ],
+      "customId": 1720811223480,
+      "boundary": {
+        "worksIn": "guild",
+        "limits": []
+      },
+      "parameters": [
+        {
+          "name": "channel_id",
+          "type": "string",
+          "description": "channel_ID",
+          "required": true,
+          "choices": [],
+          "storeAs": "channel_ID",
+          "completion": false
+        },
+        {
+          "name": "wh_name",
+          "type": "string",
+          "description": "WH_Name",
+          "required": true,
+          "choices": [],
+          "storeAs": "wh_name",
+          "completion": false
+        },
+        {
+          "name": "avatar_url",
+          "type": "string",
+          "description": "must have https://",
+          "required": false,
+          "choices": [],
+          "storeAs": "avatar_url",
+          "completion": false
+        }
+      ],
+      "description": "Create a webhook",
+      "folder": []
+    }
+  ],
+  "prjSrc": "R:\\Discord Apps\\(C)Canary",
+  "btk": "",
+  "prefix": "$",
+  "name": "Canary APP",
+  "color": "rgb(0,0,0)",
+  "structureType": 1,
+  "collapsed": false,
+  "folders": {
+    "1719772253339": {
+      "name": "gpt",
+      "color": null,
+      "closed": false
+    },
+    "1719772282275": {
+      "name": "moderation",
+      "color": null
+    },
+    "1720134270284": {
+      "name": "j&f",
+      "color": null
+    }
+  }
+}
